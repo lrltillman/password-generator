@@ -5,19 +5,100 @@ var generateBtn = document.querySelector("#generate");
 
 
 function generatePassword() {
-  var numberOfCharacters = prompt("How many characters?")
+
+  var upperCase = "ABCDEFGHIJKLMNOP"
+  var lowerCase = "abcdefghijklmnop"
+  var nums = "1234567890"
+  var specialChars = "!?()%@&[]-=+*"
+  var numOfChars = prompt("How many characters do you want?")
+  var includeSpecChars = confirm("Do you want special characters?")
   var includeNumbers = confirm("Do you want numbers?")
   var includeLowercase = confirm("Do you want lowercase letters?")
   var includeUppercase = confirm("Do you want uppercase letters?")
+  var newPass = "";
+  var passSource = "";
 
   if (includeNumbers) {
-    // how to add random numbers here? need to create array of chars?
-  } else { null }
+    passSource = passSource + nums;
+  }
 
   if (includeLowercase) {
-    //how to display lowercase letters?
-  } else { null }
+    passSource = passSource + lowerCase;
+  }
+
+  if (includeUppercase) {
+    passSource = passSource + upperCase;
+  }
+
+  if (includeSpecChars) {
+    passSource = passSource + specialChars;
+  }
+
+  for (var i = 0; i < numOfChars; i++) {
+    newPass += passSource[Math.floor(Math.random() * passSource.length)]
+  }
+
+  console.log(numOfChars);
+  console.log(includeNumbers);
+  console.log(includeLowercase);
+  console.log(includeUppercase);
+  return newPass;
 }
+
+
+
+
+
+
+
+
+
+
+
+//return at the end of a function
+// 
+
+
+
+
+
+// if (numOfChars <= 7) {
+//   alert = "Sorry! That is too few characters. Please choose 8 or more."
+
+// } else if (numOfChars >= 129) {
+//   alert = "Sorry! That is too many characters. Please choose 128 or less."
+// }
+
+// function alphaNumericString(length) {
+//   var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
+//   retVal = "";
+//   for (var i = 0, n = charset.length; i < length; ++i) {
+//   retVal += charset.charAt(Math.floor(Math.random() * n));
+//   }
+// charAt ()
+// }
+// retval would to be declared 
+// console.log(alphaNumericString(3))
+
+// if (includeNumbers) {
+//   // how to add random numbers here? need to create array of chars?
+// } else { null }
+
+// if (includeLowercase) {
+//   //how to add lowercase letters to password var?
+// } else { null }
+
+// if (includeUppercase) {
+//   //how to add uppercase letters to password var?
+// } else { null }
+
+
+
+
+
+
+
+
 /* var myNewPassword = //all logic done under function
 return myNewPassword 
 */
