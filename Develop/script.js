@@ -30,6 +30,8 @@ function generatePassword() {
   var newPass = "";
   var passSource = "";
 
+  // tutor Ramon Sanchez assisted with the following 'if' and 'for' statements
+
   if (includeNumbers) {
     passSource = passSource + nums;
   }
@@ -48,6 +50,10 @@ function generatePassword() {
 
   for (var i = 0; i < numOfChars; i++) {
     newPass += passSource[Math.floor(Math.random() * passSource.length)]
+  }
+
+  if (includeNumbers === false & includeLowercase === false & includeUppercase === false & includeSpecChars === false) {
+    newPass = "Error: please select password parameters. Click 'Generate Password' to try again."
   }
 
   console.log(numOfChars);
