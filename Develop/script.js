@@ -10,7 +10,7 @@ function generatePassword() {
   var lowerCase = "abcdefghijklmnop"
   var nums = "1234567890"
   var specialChars = "~`!@$%&*()-+=[]|:;<>?"
-  var numOfChars = prompt("How many characters do you want?")
+  var numOfChars = prompt("How many characters would you like your password to be?")
 
 
   if (numOfChars <= 7) {
@@ -23,10 +23,10 @@ function generatePassword() {
     numOfChars = prompt("How many characters do you want?")
   }
 
-  var includeSpecChars = confirm("Do you want special characters?")
-  var includeNumbers = confirm("Do you want numbers?")
-  var includeLowercase = confirm("Do you want lowercase letters?")
-  var includeUppercase = confirm("Do you want uppercase letters?")
+  var includeSpecChars = confirm("Would you like to include special characters?")
+  var includeNumbers = confirm("Would you like to include numbers?")
+  var includeLowercase = confirm("Would you like to include lowercase letters?")
+  var includeUppercase = confirm("Would you like uppercase to include letters?")
   var newPass = "";
   var passSource = "";
 
