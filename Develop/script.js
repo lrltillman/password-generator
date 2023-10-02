@@ -9,8 +9,20 @@ function generatePassword() {
   var upperCase = "ABCDEFGHIJKLMNOP"
   var lowerCase = "abcdefghijklmnop"
   var nums = "1234567890"
-  var specialChars = "!?()%@&[]-=+*"
+  var specialChars = "~`!@$%&*()-+=[]|:;<>?"
   var numOfChars = prompt("How many characters do you want?")
+
+
+  if (numOfChars <= 7) {
+    alert("Sorry! That is too few characters. Please select 8 or more.")
+    numOfChars = prompt("How many characters do you want?")
+  }
+
+  if (numOfChars >= 129) {
+    alert("Sorry! That is too many characters. Please choose 128 or less.")
+    numOfChars = prompt("How many characters do you want?")
+  }
+
   var includeSpecChars = confirm("Do you want special characters?")
   var includeNumbers = confirm("Do you want numbers?")
   var includeLowercase = confirm("Do you want lowercase letters?")
