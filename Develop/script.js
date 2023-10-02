@@ -6,10 +6,10 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
 
-  var upperCase = "ABCDEFGHIJKLMNOP"
-  var lowerCase = "abcdefghijklmnop"
+  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  var lowerCase = "abcdefghijklmnopqrstuvwxyz"
   var nums = "1234567890"
-  var specialChars = "~`!@$%&*()-+=[]|:;<>?"
+  var specialChars = "~!@$%&*)-+=:;<?"
   var numOfChars = prompt("How many characters would you like your password to be?")
 
 
@@ -56,76 +56,6 @@ function generatePassword() {
   console.log(includeUppercase);
   return newPass;
 }
-
-
-
-
-
-
-
-
-
-
-
-//return at the end of a function
-// 
-
-
-
-
-
-// if (numOfChars <= 7) {
-//   alert = "Sorry! That is too few characters. Please choose 8 or more."
-
-// } else if (numOfChars >= 129) {
-//   alert = "Sorry! That is too many characters. Please choose 128 or less."
-// }
-
-// function alphaNumericString(length) {
-//   var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
-//   retVal = "";
-//   for (var i = 0, n = charset.length; i < length; ++i) {
-//   retVal += charset.charAt(Math.floor(Math.random() * n));
-//   }
-// charAt ()
-// }
-// retval would to be declared 
-// console.log(alphaNumericString(3))
-
-// if (includeNumbers) {
-//   // how to add random numbers here? need to create array of chars?
-// } else { null }
-
-// if (includeLowercase) {
-//   //how to add lowercase letters to password var?
-// } else { null }
-
-// if (includeUppercase) {
-//   //how to add uppercase letters to password var?
-// } else { null }
-
-
-
-
-
-
-
-
-/* var myNewPassword = //all logic done under function
-return myNewPassword 
-*/
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
