@@ -17,3 +17,5 @@ Link to GitHub pages:
 Screenshot of browser:
 
 ![screenshot of generator demo](./Assets/images/generator-screenshot.jpg)
+
+### Received assistance from tutor Ramon Sanchez
