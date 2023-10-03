@@ -57,6 +57,7 @@ function generatePassword() {
   }
 
   console.log(numOfChars);
+  console.log(includeSpecChars);
   console.log(includeNumbers);
   console.log(includeLowercase);
   console.log(includeUppercase);
